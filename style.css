@@ -1,0 +1,578 @@
+body {
+    background-color: #53516f;
+}
+
+.container {
+    height: 800px;
+    width: 600px;
+    background: rgb(235,123,147);
+    background: radial-gradient(circle, rgba(235,123,147,1) 0%, rgba(235,123,147,0.45231607629427795) 100%);
+	/* border: 3px solid white; */
+	position: absolute;
+	margin: auto;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.shooting-star {
+    width: 30px;
+    height: 195px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 55%, rgba(218,156,195,1) 91%, rgba(234,122,146,1) 100%);
+    position: absolute;
+    top: 70px;
+    left: 200px;
+    clip-path: polygon(50% 0%, 45% 100%, 55% 100%);
+    z-index: 1;
+    transform: rotate(45deg);
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.cloud-inner-left {
+    height: auto;
+    width: auto;
+    position: absolute;
+    left: 65px;
+    top: 355px;
+    transform: scale(0.5);
+    animation: cloudLeft 4s ease-in-out infinite;
+}
+
+.cloud-inner-right {
+    height: auto;
+    width: auto;
+    position: absolute;
+    right: 70px;
+    top: 300px;
+    /* transform: scale(0.5); */
+    transform: rotateY(180deg);
+    animation: cloudRight 4s ease-in-out infinite;
+}
+
+
+.cil-1 {
+    height: 30px;
+    width: 30px;
+    background-color: #f4e0e3;
+    position: absolute;
+    border-radius: 50%;
+    left: 52px;
+    top: -20px;
+}
+
+.cil-2 {
+    height: 50px;
+    width: 50px;
+    background-color: #f4e0e3;
+    position: absolute;
+    border-radius: 50%;
+    left: 75px;
+    top: -33px;
+}
+
+
+.cil-body {
+    width: 135px;
+    height: 50px;
+    background-color: #f4e0e3;
+    position: absolute;
+    left: 9px;
+    top: 0;
+    border-radius: 50px;
+}
+
+.cil-bottom {
+    width: 160px;
+    height: 12px;
+    background-color: #f4e0e3;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    border-radius: 0% 100% 0% 100% / 0% 100% 0% 100%;
+    transform: rotate(178deg);
+}
+
+.sun {
+    height: 125px;
+    width: 125px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    left: 230px;
+    top: 300px;
+    box-shadow:
+        0 0 150px 30px #fff, 
+        0 0 300px 60px #fff,
+        0 0 140px 90px #f5c1cd;
+}
+
+.mountain-1 {
+    height: 190px;
+    width: 260px;
+    background-color: #697aaa;
+    position: absolute;
+    left: 140px;
+    bottom: 335px;
+    /* clip-path: polygon(39% 46%, 57% 36%, 70% 23%, 100% 46%, 100% 100%, 0 100%, 0 57%, 16% 48%); */
+    clip-path: polygon(45% 65%, 71% 45%, 100% 71%, 100% 100%, 0 100%, 0 93%, 20% 73%);
+}
+
+.mountain-2 {
+    height: 250px;
+    width: 255px;
+    background-color: #6f81af;
+    position: absolute;
+    right: 45px;
+    bottom: 335px;
+    clip-path: polygon(62% 51%, 71% 44%, 84% 56%, 100% 77%, 100% 100%, 0 100%, 14% 76%, 27% 71%, 46% 62%);
+}
+
+.mountain-2-shadow {
+    height: 282px;
+    width: 255px;
+    background-color: #5a6c9e;
+    position: absolute;
+    right: -12px;
+    bottom: -18px;
+    clip-path: polygon(62% 51%, 71% 44%, 84% 56%, 100% 77%, 100% 100%, 0 100%, 14% 76%, 27% 71%, 46% 62%);
+    transform: scale(0.9);
+    z-index: 2;
+}
+
+.mountain-3 {
+    height: 166px;
+    width: 260px;
+    background-color: #6c7eae;
+    position: absolute;
+    left: 0;
+    bottom: 335px;
+    clip-path: polygon(28% 69%, 82% 82%, 100% 100%, 0 100%, 0 85%);
+}
+
+.mountain-3-shadow {
+    height: 166px;
+    width: 289px;
+    background-color: #5a6c9e;
+    position: absolute;
+    left: -23px;
+    bottom: -10px;
+    clip-path: polygon(28% 69%, 82% 82%, 100% 100%, 0 100%, 0 85%);
+    transform: scale(0.9);
+    z-index: 2;
+}
+
+.mountain-4 {
+    height: 240px;
+    width: 125px;
+    background-color: #475292;
+    position: absolute;
+    right: 0;
+    bottom: 335px;
+    clip-path: polygon(28% 69%, 82% 82%, 100% 100%, 0 100%, 0 85%);
+    transform: scaleX(-1);
+}
+
+.forest-left {
+    height: auto;
+    width: auto;
+    position: absolute;
+    background-color: red;
+    content: '';
+    bottom: 368px;
+    left: -5px;
+    transform: scale(0.65);
+}
+
+.f-1 {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    background-color: #4f5e99;
+    top: 10px;
+    left: 10px;
+    clip-path: polygon(50% 0%, 100% 70%, 61% 70%, 31% 70%, 0 70%);
+    transform: scale(0.7);
+}
+
+.f-2 {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    background-color: #4f5e99;
+    top: 20px;
+    left: 10px;
+    clip-path: polygon(50% 0%, 100% 70%, 61% 70%, 31% 70%, 0 70%);
+    transform: scale(0.9);
+}
+
+.f-3 {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    background-color: #4f5e99;
+    top: 30px;
+    left: 10px;
+    clip-path: polygon(50% 0%, 100% 70%, 61% 70%, 31% 70%, 0 70%);
+}
+
+.tree-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.tree-2 {
+    position: absolute;
+    left: 20px;
+    top: 0;
+}
+
+.tree-3 {
+    position: absolute;
+    left: 40px;
+    top: 0;
+}
+
+.tree-4 {
+    position: absolute;
+    left: 60px;
+    top: 0;
+}
+
+.tree-5 {
+    position: absolute;
+    left: 80px;
+    top: 0;
+}
+
+.tree-6 {
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+
+.tree-7 {
+    position: absolute;
+    left: 120px;
+    top: 0;
+}
+
+.tree-8 {
+    position: absolute;
+    left: 140px;
+    top: 0;
+}
+
+.tree-9 {
+    position: absolute;
+    left: 160px;
+    top: 0;
+}
+
+.tree-10 {
+    position: absolute;
+    left: 180px;
+    top: 0;
+}
+
+.tree-11 {
+    position: absolute;
+    left:200px;
+    top: 0;
+}
+
+.tree-12 {
+    position: absolute;
+    left: 220px;
+    top: 0;
+}
+
+.tree-13 {
+    position: absolute;
+    left: 240px;
+    top: 0;
+}
+
+.tree-14 {
+    position: absolute;
+    left: 260px;
+    top: 0;
+}
+
+.tree-15 {
+    position: absolute;
+    left: 280px;
+    top: 0;
+}
+
+.tree-16 {
+    position: absolute;
+    left: 300px;
+    top: 0;
+}
+
+.tree-17 {
+    position: absolute;
+    left: 320px;
+    top: 0;
+}
+
+.tree-18 {
+    position: absolute;
+    left: 340px;
+    top: 0;
+}
+
+.tree-19 {
+    position: absolute;
+    left: 360px;
+    top: 0;
+}
+
+.tree-20 {
+    position: absolute;
+    left: 380px;
+    top: 0;
+}
+
+.tree-21 {
+    position: absolute;
+    left: 400px;
+    top: 0;
+}
+
+.tree-22 {
+    position: absolute;
+    left: 420px;
+    top: 0;
+}
+
+.tree-23 {
+    position: absolute;
+    left: 440px;
+    top: 0;
+}
+
+.tree-24 {
+    position: absolute;
+    left: 460px;
+    top: 0;
+}
+
+.forest-shadow-left {
+    height: auto;
+    width: auto;
+    position: absolute;
+    background-color: red;
+    content: '';
+    bottom: -100px;
+    left: 0;
+    transform: scale(0.5);
+    transform: rotateX(180deg);
+    opacity: 0.2;
+}
+
+.forest-right {
+    height: auto;
+    width: auto;
+    position: absolute;
+    background-color: red;
+    content: '';
+    bottom: 0;
+    left: 422px;
+}
+
+.forest-shadow-right {
+    height: auto;
+    width: auto;
+    position: absolute;
+    background-color: red;
+    content: '';
+    bottom: -100px;
+    left: 0;
+    transform: scale(0.5);
+    transform: rotateX(180deg);
+    opacity: 0.2;
+}
+
+.side-mountain-left {
+    height: 400px;
+    width: 330px;
+    position: absolute;
+    background-color: #475292;
+    bottom: -420px;
+    left: 7px;
+    clip-path: polygon(65% 5%, 93% 12%, 100% 38%, 80% 43%, 73% 68%, 46% 78%, 0 100%, 0 0, 41% 4%);
+}
+
+.side-mountain-right {
+    height: 415px;
+    width: 380px;
+    position: absolute;
+    background-color: #475292;
+    bottom: -428px;
+    left: 551px;
+    clip-path: polygon(55% 6%, 74% 0, 100% 0, 100% 100%, 63% 92%, 55% 70%, 24% 73%, 0 64%, 31% 12%);
+}
+
+/* triangle */
+
+/* .bg {
+        position: absolute;
+        width: 1500px;
+        height: 900px;
+        border-width: 10px;
+        background: rgb(197, 67, 103);
+        background: radial-gradient(
+          circle at top,
+          rgba(197, 67, 103, 1) 0%,
+          rgba(119, 65, 113, 1) 40%,
+          rgba(44, 64, 123, 1) 100%
+        );
+      }
+      .clipshape {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #475292;
+        width: 50%;
+        height: 600px;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      } */
+/* triangle above---------------- */
+
+/* for outer clouds */
+.cloud_container {
+        height: 500px;
+        width: 500px;
+        position:relative;
+        top: 180;
+        left: 480;
+        z-index: 1000000 !important;
+      }
+      .cloud_container:before {
+        content: "";
+        position: relative;
+        z-index: -1;
+        width: calc(500px * 0.75);
+        height: calc(500px * 0.75);
+      }
+      .cloud1 {
+        position: relative;
+        top: 100px;
+        left: 0;
+      }
+      .bubble1 {
+        /*base*/
+        /* background-color: cornsilk; */
+        width: 0;
+        height: 0;
+        border-bottom: 20px solid cornsilk;
+        border-left: 150px solid transparent;
+        border-right: 150px solid transparent;
+      }
+      .bubble2 {
+        /* big circle */
+        background-color: cornsilk;
+        width: 100px;
+        height: 100px;
+        position: relative;
+        border-radius: 50%;
+        bottom: 100px;
+        left: 100px;
+      }
+      .bubble3 {
+        /* left circle */
+        background-color: cornsilk;
+        width: 60px;
+        height: 60px;
+        position: relative;
+        border-radius: 50%;
+        bottom: 160px;
+        left: 58px;
+      }
+      .bubble4 {
+        /* right1 circle */
+        background-color: cornsilk;
+        width: 70px;
+        height: 70px;
+        position: relative;
+        border-radius: 50%;
+        bottom: 233px;
+        left: 175px;
+      }
+      .bubble5 {
+        /* right2 circle */
+        background-color: cornsilk;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        border-radius: 50%;
+        bottom: 271px;
+        left: 225px;
+      }
+
+      /* ------------------------- */
+      .cloud2 {
+        transform: scale(0.75);
+        position: relative;
+        left: 320px;
+        bottom: 70px;
+      }
+      
+      /* .cloud3 {
+        transform: scale(0.75);
+        position: relative;
+        left: 320px;
+        bottom: 70px;
+      } */
+      /* end of outer clouds */
+
+/* ANIMATIONS */
+@keyframes cloudLeft {
+  0% { left: 10px;}
+  50%{ left : 40px;}
+  100%{ left: 0;}
+}
+
+@keyframes cloudRight {
+  0% { right: 10px;}
+  50%{ right : 40px;}
+  100%{ right: 0;}
+}
+
+
+
+/* #region bottom-mountains */
+.bottom-mountain {
+    height: 568px;
+    width: 601px;
+    position: absolute;
+    bottom: 0px;
+    left: -1px !important;
+    background-color: #32417C;
+    /* -webkit-clip-path: polygon(31% 76%, 35% 74%, 38% 78%, 46% 86%, 90% 86%, 90% 93%, 10% 93%, 10% 87%, 21% 81%);
+    clip-path: polygon(31% 76%, 35% 74%, 38% 78%, 46% 86%, 90% 86%, 90% 93%, 10% 93%, 10% 87%, 21% 81%); */
+    clip-path: polygon(19% 62%, 60% 81%, 81% 71%, 100% 79%, 100% 100%, 0 100%, 0 81%);
+}
+/* .bottom-tree {
+    position: absolute;
+    height: 100px;
+    width: 80px;
+    bottom: -458px;
+    left: 250px;
+    background-color: #32417C;
+    -webkit-clip-path: polygon(35% 83%, 62% 1%, 89% 83%, 62% 84%, 62% 96%, 56% 96%, 56% 83%, 35% 83%);
+    clip-path: polygon(35% 83%, 62% 1%, 89% 83%, 62% 84%, 62% 96%, 56% 96%, 56% 83%, 35% 83%);
+}
+.secondary-tree {
+    height: 80px;
+    width: 60px;
+    bottom: -465px;
+    left: 220px !important;
+} */
+/* #endregion bottom-mountains */
