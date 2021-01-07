@@ -1,5 +1,5 @@
 body {
-    background-color: #53516f;
+    background-image: linear-gradient(220deg, #a16992 19%, #475292 85%);
 }
 
 .container {
@@ -13,7 +13,10 @@ body {
 	top: 0;
 	left: 0;
 	bottom: 0;
-	right: 0;
+    right: 0;
+    border-width: 25px;
+    border-style: double;
+    border-color: #53516f;
 }
 
 .shooting-star {
@@ -400,7 +403,7 @@ body {
 
 .side-mountain-left {
     height: 400px;
-    width: 330px;
+    width: 331px;
     position: absolute;
     background-color: #475292;
     bottom: -420px;
@@ -410,12 +413,12 @@ body {
 
 .side-mountain-right {
     height: 415px;
-    width: 380px;
+    width: 350px;
     position: absolute;
     background-color: #475292;
     bottom: -428px;
-    left: 551px;
-    clip-path: polygon(55% 6%, 74% 0, 100% 0, 100% 100%, 63% 92%, 55% 70%, 24% 73%, 0 64%, 31% 12%);
+    left: 581px;
+    clip-path: polygon(55% 6%, 74% 0, 100% 0, 100% 100%, 63% 92%, 55% 81%, 21% 70%, -1% 60%, 30% 21%);
 }
 
 /* triangle */
